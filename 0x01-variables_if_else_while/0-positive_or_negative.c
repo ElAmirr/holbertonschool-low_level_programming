@@ -8,8 +8,9 @@
 */
 int main(void)
 {
-srand(time(NULL));
-int r = rand();
+int n;
+srand(time(0));
+n = rand() - RAND_MAX / 2;
 if (r > 0)
 {
 	/* if condition is true then print the following */
