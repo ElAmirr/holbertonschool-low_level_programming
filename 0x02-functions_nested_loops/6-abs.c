@@ -1,14 +1,17 @@
 #include "holberton.h"
 /**
-*_abs - 0
-*@n: an integer
-*Return: abs (n)
+*_islower - 0
+*@c: an integer
+*Return: either 0 or 1
 */
-int _abs(int n);
+int _islower(int c)
 {
-if (n >= 0)
+if (c >= 'a' && c <= 'z')
 {
-return (n);
+return (1);
 }
-return (n * (-1));
+else
+{
+return (0);
+}
 }
