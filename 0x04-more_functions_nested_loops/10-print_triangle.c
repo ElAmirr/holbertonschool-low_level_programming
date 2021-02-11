@@ -1,6 +1,6 @@
 #include "holberton.h"
 /**
-* a function that prints a triangle.
+* print_triangle - draws a triangle.
 * @size: integer.
 * Return: A triangle
 */
