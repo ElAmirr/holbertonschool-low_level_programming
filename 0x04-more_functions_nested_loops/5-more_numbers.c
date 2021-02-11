@@ -1,6 +1,6 @@
 #include "holberton.h"
 /**
-*function that prints 10 times the numbers, from 0 to 14.
+*more_numbers - prints from 0 to 14 ten times.
 *
 * Return: the output
 */
@@ -21,3 +21,4 @@ _putchar(i % 10 + '0');
 _putchar('\n');
 }
 }
+
