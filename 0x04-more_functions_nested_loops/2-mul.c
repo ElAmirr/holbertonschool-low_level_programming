@@ -1,4 +1,3 @@
-
 #include "holberton.h"
 /**
 *mul - main function that multiplies a couple of integers.
