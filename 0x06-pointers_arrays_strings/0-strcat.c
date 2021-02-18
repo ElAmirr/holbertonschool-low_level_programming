@@ -1,4 +1,3 @@
-#include "holberton.h"
 char *_strcat(char *dest, char *src)
 {
     //move till the end of s1
@@ -17,5 +16,4 @@ char *_strcat(char *dest, char *src)
         j++;
     }
     dest[i] = '\0';
-    return (dest);    
-}
+return dest; 
