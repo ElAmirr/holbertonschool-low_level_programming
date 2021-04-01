@@ -1,23 +1,36 @@
-#include <stdio.h>
-#include <string.h>
+#include "holberton.h"
 #include <stdlib.h>
 /**
-* main - function that multiplies two numbers.
-* @argc: argument count.
-* @argv: argument vector.
-* Return: either 0 or 1.
+* alloc_grid - function that returns a pointer to a 2 dimensional array.
+* @width: width.
+* @height: height.
+* Return: NULL.
 */
-
-int main(int argc, char *argv[])
+int **alloc_grid(int width, int height)
 {
-	if (argc != 3)
-	{
-	printf("Error\n");
-	return (1);
-	}
-		else
-	{
-	printf("%d\n", atoi(argv[1]) * atoi(argv[2]));
-	}
-return (0);
+int i, j, **d;
+
+	if (height < 1 || width < 1)
+	return ('\0');
+	d = malloc(height * sizeof(int *));
+		if (d == '\0')
+		{
+		free(d);
+		return ('\0');
+		}
+			for (i = 0; i < height; i++)
+			{
+			d[i] = malloc(width * sizeof(int));
+				if (d[i] == '\0')
+				{
+					for (i--; i >= 0; i--)
+					free(d[i]);
+					free(d);
+					return ('\0');
+				}
+			}
+	for (i = 0; i < height; i++)
+	for (j = 0; j < width; j++)
+	d[i][j] = 0;
+	return (d);
 }
