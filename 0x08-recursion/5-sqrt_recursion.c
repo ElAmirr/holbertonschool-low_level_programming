@@ -1,29 +1,42 @@
 #include "holberton.h"
+/**
+* con - function that returns the natural square root of a number.
+* @i: integer.
+* @n: integer.
+* Return: ..
+*/
+
+int con(long int n, long int i)
+{
+	if (i * i > n)
+	{
+	return (-1);
+	}
+		if (i * i == n)
+		{
+		return (i);
+		}
+return (con(n, i + 1));
+}
+
+
+
 
 /**
-* _sqrt_recursion - function that returns the natural square root 
-* of a number.
-* @n: type int
-* Return: fill
-**/
-
-int _check_integer(int i, int n)
-{
-	if (i * n != n)
-		i++;
-	return (i);
-}
+* _sqrt_recursion - function that returns the natural square root of a number.
+* @n: integer.
+* Return: ..
+*/
 
 int _sqrt_recursion(int n)
 {
-	if (n < 0)
-		return (-1);
-	else if (n == 0)
-		return (0);
-	else
+	if (n == 0)
 	{
-		_check_integer(0, n);
-		return (_sqrt_recursion(n));
-	}
 	return (0);
+	}
+		if (n < 0)
+		{
+		return (-1);
+		}
+return (con(n, 1));
 }
